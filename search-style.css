@@ -1,0 +1,541 @@
+@charset "UTF-8";
+/* Fonts: 
+
+Titulo: Fredoka One
+Parrafos: Kollektif */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f7efd4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 1fr auto 0.2fr;
+      grid-template-rows: 1fr auto 0.2fr;
+      grid-template-areas: 'header' 'section' 'footer';
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+.logo {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -3;
+  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo img {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 300px;
+  height: 290px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 8;
+}
+
+nav #checkbox {
+  display: none;
+}
+
+nav ul {
+  height: 100%;
+  background-color: #f87829;
+  width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 20px;
+  padding-top: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f7efd4;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+nav li:nth-of-type(2) i {
+  margin-left: 5px;
+}
+
+nav .label {
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+  width: 100vw;
+  padding-bottom: 10px;
+  background-color: #f7efd4;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+nav .label .span {
+  position: relative;
+  background: #f87829;
+  display: inline-block;
+  height: 2px;
+  width: 25px;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+}
+
+nav .label .span:before {
+  background: #f87829;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  top: 5px;
+}
+
+nav .label .span:after {
+  background: #f87829;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  top: -5px;
+}
+
+nav #checkbox:checked ~ ul {
+  width: 300px;
+}
+
+nav #checkbox:checked ~ .label {
+  background: transparent;
+}
+
+nav #checkbox:checked ~ .label .span {
+  background: transparent;
+}
+
+nav #checkbox:checked ~ .label .span:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+  background-color: #f7efd4;
+}
+
+nav #checkbox:checked ~ .label .span:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+  background-color: #f7efd4;
+}
+
+footer {
+  margin-top: 50px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  background-color: #f7efd4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 1;
+}
+
+footer i {
+  color: #fa8f4d;
+  font-size: 20px;
+}
+
+section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: section;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.plant {
+  position: relative;
+  width: 80%;
+  margin-bottom: 100px;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 100px;
+  padding-top: 3%;
+  background-color: #ee9f6e;
+}
+
+.plant img {
+  width: 60%;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.plant li {
+  list-style: none;
+}
+
+.plant .p7 img {
+  height: 150px;
+}
+
+.plant h3 {
+  color: #f7efd4;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 2%;
+}
+
+.plant p {
+  color: #436e4f;
+  font-family: "Aleo", serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 3%;
+}
+
+.plant li {
+  padding-left: 40px;
+  padding-right: 40px;
+  color: #f7efd4;
+  font-family: "Aleo", serif;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.p0::after {
+  content: 'TIP: No soportan el frío! Van a necesitar protección en el caso de encontrarse en zonas con bajas temperaturas';
+  position: absolute;
+  background: #c4e3cb;
+  width: 50%;
+  padding: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #436e4f;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  margin-right: -30px;
+  margin-bottom: -50px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
+}
+
+.p1::after {
+  content: 'TIP: Estas plantitas requieren un drenaje para eliminar el exceso de agua!';
+  position: absolute;
+  background: #c4e3cb;
+  width: 50%;
+  padding: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #436e4f;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  margin-right: -30px;
+  margin-bottom: -50px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
+}
+
+.p2::after {
+  content: 'TIP: Al ser una planta resistente no tolera bien el exceso de fertilizante.';
+  position: absolute;
+  background: #c4e3cb;
+  width: 50%;
+  padding: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #436e4f;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  margin-right: -30px;
+  margin-bottom: -50px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
+}
+
+.p3::after {
+  content: 'TIP: Hay que esperar 3-4 años para hacer uso de sus propiedades curativas.';
+  position: absolute;
+  background: #c4e3cb;
+  width: 50%;
+  padding: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #436e4f;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  margin-right: -30px;
+  margin-bottom: -50px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
+}
+
+.p4::after {
+  content: 'TIP: Los bonsai necesitan estar en un ambiente con un nivel de humedad y temperatura elevado.';
+  position: absolute;
+  background: #c4e3cb;
+  width: 50%;
+  padding: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #436e4f;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  margin-right: -30px;
+  margin-bottom: -50px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
+}
+
+.p5::after {
+  content: 'TIP: Los cactus soportan suelos áridos pero crecen mejor si se cultivan en una tierra más nutrida.';
+  position: absolute;
+  background: #c4e3cb;
+  width: 50%;
+  padding: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #436e4f;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  margin-right: -30px;
+  margin-bottom: -50px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
+}
+
+.p6::after {
+  content: 'TIP: No soporta temperaturas muy frías ni secas.';
+  position: absolute;
+  background: #c4e3cb;
+  width: 50%;
+  padding: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #436e4f;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  margin-right: -30px;
+  margin-bottom: -50px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
+}
+
+.p7::after {
+  content: 'TIP: Al regar, hay que evitar que sus ramas y flores se mojen.';
+  position: absolute;
+  background: #c4e3cb;
+  width: 50%;
+  padding: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #436e4f;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  margin-right: -30px;
+  margin-bottom: -50px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
+}
+
+@media only screen and (min-width: 600px) {
+  header {
+    background-image: url("img/desktop/4.png");
+    background-repeat: no-repeat;
+  }
+  header .label {
+    display: none;
+  }
+  header .logo {
+    margin-top: 40px;
+    padding: unset;
+  }
+  header nav {
+    background-color: #fa8f4d;
+    height: 40px;
+  }
+  header nav ul {
+    width: unset;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: #fa8f4d;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  header nav ul li {
+    padding: unset;
+  }
+  header nav ul li a {
+    font-size: 25px;
+  }
+  section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section .plant {
+    width: 350px;
+    height: 750px;
+    padding-top: unset;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+  section .plant img {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  footer {
+    height: 40px;
+  }
+}
+/*# sourceMappingURL=search-style.css.map */

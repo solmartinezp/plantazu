@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantazu</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Oswald:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="checkbox"/>
+            <label for="checkbox" class="label"><span class="span"></span></label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="buscar.html">Buscar<i class="fas fa-search"></i></a></li> 
+                <li><a href="#quienes-somos">Quiénes somos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="logo"> 
+            <img src="img/logo/logo1.png" alt="logo"/> 
+        </div>
+    </header>
+
+    <main>
+        <section class="title">
+            <p>"Al final sólo somos plantas complejas, <br/> hay que tomar agua y sol todos los días"</p>
+        </section>
+
+        <section class="search" id="search">
+           <h2>Buscá tu planta</h2>
+           <p>Encontrá tu planta y descubrí sus características, curiosidades y los cuidados que precisa.</p>
+        </section>
+
+        <section class="quienes-somos" id="quienes-somos">
+            <h2>Sobre Plantazu</h2>
+            <p class="parr1"> "No hay nada que levante más una habitación que una planta. Son esa persona que si no viene a la fiesta no recordas esa noche porque es insulsa sin su presencia. </p>
+            <p class="parr2"> La constancia de cuidarlas es un gran hábito. Son muy comunicativas, pero tenes que prestarles atención"- Azul Jazmin </p>
+        </section>
+    
+        <section class="contacto" id="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre"></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required/>
+                <br/>
+                <label for="apellido"></label>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required/>
+                <br/>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email" required/>
+                <br/>
+                <label for="tel"></label>
+                <input type="tel" id="tel" name="tel" placeholder="Telefono" required/>
+                <br/>
+                <input type="submit" id="button" value="Enviar"/>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <i class="fab fa-instagram"><a href=""></a></i> 
+        <i class="fab fa-twitter"><a href=""></a></i>
+        <i class="fab fa-facebook-square"><a href=""></a></i>
+    </footer>
+</body>
+</html>

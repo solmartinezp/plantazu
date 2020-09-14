@@ -1,0 +1,134 @@
+@import '_variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    background-color: $color6;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto 0.2fr;
+    grid-template-areas: 'header'
+                            'main'
+                            'footer';
+}
+@import '_header';
+@import '_main';
+@import '_footer';
+
+@media only screen and (min-width: 600px) {
+    header {
+        background-image: url('img/desktop/4.png');
+        background-repeat: no-repeat;
+        .label {
+            display: none;
+        }
+        .logo {
+            margin-top: 40px;
+            padding: unset;
+            
+        }
+        nav {
+            background-color: $color2;
+            height: 40px;
+            ul {
+                width: unset;
+                flex-direction: row;
+                background-color: $color2;
+                justify-content: space-evenly;
+                li {
+                    padding: unset;
+                    a {
+                        font-size: 25px;
+                    }
+                }
+
+            }
+        }
+    }
+    
+    main {
+        width: auto;
+        background-image: url('img/desktop/3.png');
+        grid-template-rows: auto auto auto auto;
+        .search {
+            background-image: none;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: unset;
+            margin-bottom: 100px;
+            p {
+                text-align: center;
+                margin-right: 0;
+                width: unset;
+                margin-left: 0;
+            }
+        }
+        .quienes-somos {
+            background-image: none;
+            margin: unset;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 100px;
+            p {
+                text-align: center;
+                margin: unset;
+                width: 50%;
+                float: unset;
+            }
+
+        }
+        .contacto {
+            background-size: contain;
+            background-color: $color3;
+            background-repeat: no-repeat;
+            background-position: 20% bottom;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                margin-right: unset;
+                text-align: center;
+            }
+            form {
+                float: unset;
+                margin: unset;
+                width: 25%;
+            }
+        }
+    }
+
+    footer {
+        height: 40px;
+        position: relative;
+        bottom: 0;
+        margin: unset;
+        padding: unset;
+        border: unset;
+        align-items: flex-end;
+    }
+}
+
+@media only screen and (min-width: 410px) and (max-width: 599px) {
+    .quienes-somos {
+        background-repeat: no-repeat;
+        background-size: 90%;
+        background-position: 20% 90%;
+    }
+    .contacto {
+        background-repeat: no-repeat;
+        background-color: $color3;
+        background-size: 80%;
+    }
+}
