@@ -4,20 +4,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    width: min-content;
 }
 
 body {
     background-color: $color6;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1fr auto 0.2fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 'header'
     'section'
     'footer';
     justify-content: center;
+    
 }
 
 @import '_header';
+header {
+    .logo {
+        img {
+            height: 90%; 
+            padding: unset;
+            width: inherit;
+        }
+    }
+}
+
 @import '_footer';
 
 section {
@@ -27,6 +39,8 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
+    width: auto;
 }
 
 .plant {
@@ -47,20 +61,13 @@ section {
         height: 200px;
         border-radius: 5px;
     }
-    li {
-        list-style: none;
-    }
-    .p7 {
-        img {
-            height: 150px;
-        }
-    }
     h3 {
         color: $color6;
         font-family: $font3;
         text-transform: uppercase;
         font-size: 30px;
         margin-bottom: 2%;
+        width: fit-content;
     }
     p {
         color: $color3;
@@ -69,7 +76,12 @@ section {
         font-weight: bold;
         text-decoration: underline;
         margin-bottom: 3%;
+        width: fit-content;
     }
+    ul {
+        width: fit-content;
+    }
+
     li {
         padding-left: 40px;
         padding-right: 40px;
@@ -77,7 +89,19 @@ section {
         font-family: $font1;
         font-size: 20px;
         padding-bottom: 5px;
-        
+        width: fit-content;
+        list-style: none;        
+    }
+}
+
+.p0 {
+    margin-bottom: 150px;
+}
+
+.p7 {
+    margin-bottom: 150px;
+    img {
+        height: 150px;
     }
 }
 
@@ -96,7 +120,7 @@ section {
     bottom: 0;
     right: 0;
     margin-right: -30px;
-    margin-bottom: -50px;
+    margin-bottom: -100px;
     transform: rotate(10deg);
     box-shadow: 5px 5px 20px black;
 }
@@ -122,7 +146,7 @@ section {
 }
 
 .p2::after {
-    content: 'TIP: Al ser una planta resistente no tolera bien el exceso de fertilizante.';
+    content: 'TIP: Al ser una planta resistente, puede vivir en el agua!';
     position: absolute; 
     background: $color5;
     width: 50%;
