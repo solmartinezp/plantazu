@@ -26,7 +26,7 @@ main {
     font-family: $font1;
     color: $color3;
     font-size: 25px;
-    background-image: url('img/bg/2.png');
+    background-image: url('../img/bg/2.png');
     background-size: cover;
     background-position: 80% bottom;
     margin-bottom: 50px;
@@ -51,7 +51,7 @@ main {
     text-align: center;
     font-family: $font1;
     font-size: 25px;
-    background-image: url('img/bg/8.png');
+    background-image: url('../img/bg/8.png');
     background-size: cover;
     background-position: bottom;
     margin-bottom: 80px;
@@ -76,7 +76,7 @@ main {
 .contacto {
     grid-area: contacto;
     width: 100vw;
-    background-image: url('img/bg/1.png');
+    background-image: url('../img/bg/1.png');
     background-size: cover;
     background-position: bottom;
     h2 {

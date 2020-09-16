@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: min-content;
 }
 
 body {
@@ -23,9 +22,7 @@ body {
 header {
     .logo {
         img {
-            height: 90%; 
             padding: unset;
-            width: inherit;
         }
     }
 }
@@ -272,19 +269,21 @@ section {
 
 @media only screen and (min-width: 600px) {
     header {
-        background-image: url('img/desktop/4.png');
+        background-image: url('../img/desktop/4.png');
         background-repeat: no-repeat;
+        background-size: cover;
         .label {
             display: none;
         }
         .logo {
             margin-top: 40px;
             padding: unset;
-            
+           
         }
         nav {
             background-color: $color2;
             height: 40px;
+            width: 100vw;
             ul {
                 width: unset;
                 flex-direction: row;
@@ -292,6 +291,7 @@ section {
                 justify-content: space-evenly;
                 li {
                     padding: unset;
+                    width: fit-content;
                     a {
                         font-size: 25px;
                     }
@@ -305,8 +305,11 @@ section {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        
+        align-items: flex-start;
+        background-image: url('../img/desktop/3.png');
+        background-size: contain;
         .plant {
+            margin-top: 100px;
             width: 350px;
             height: 750px;
             padding-top: unset;

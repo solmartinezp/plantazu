@@ -21,7 +21,7 @@ body {
 
 @media only screen and (min-width: 600px) {
     header {
-        background-image: url('img/desktop/4.png');
+        background-image: url('../img/desktop/4.png');
         background-repeat: no-repeat;
         .label {
             display: none;
@@ -52,7 +52,8 @@ body {
     
     main {
         width: auto;
-        background-image: url('img/desktop/3.png');
+        background-image: url('../img/desktop/3.png');
+        background-size: contain;
         grid-template-rows: auto auto auto auto;
         .search {
             background-image: none;
@@ -97,6 +98,8 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 50%;
+            border-radius: 10px;
             h2 {
                 margin-right: unset;
                 text-align: center;

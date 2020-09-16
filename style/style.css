@@ -198,7 +198,7 @@ main {
   font-family: "Aleo", serif;
   color: #436e4f;
   font-size: 25px;
-  background-image: url("img/bg/2.png");
+  background-image: url("../img/bg/2.png");
   background-size: cover;
   background-position: 80% bottom;
   margin-bottom: 50px;
@@ -224,7 +224,7 @@ main {
   text-align: center;
   font-family: "Aleo", serif;
   font-size: 25px;
-  background-image: url("img/bg/8.png");
+  background-image: url("../img/bg/8.png");
   background-size: cover;
   background-position: bottom;
   margin-bottom: 80px;
@@ -253,7 +253,7 @@ main {
   -ms-grid-column: 1;
   grid-area: contacto;
   width: 100vw;
-  background-image: url("img/bg/1.png");
+  background-image: url("../img/bg/1.png");
   background-size: cover;
   background-position: bottom;
 }
@@ -325,7 +325,7 @@ footer i {
 
 @media only screen and (min-width: 600px) {
   header {
-    background-image: url("img/desktop/4.png");
+    background-image: url("../img/desktop/4.png");
     background-repeat: no-repeat;
   }
   header .label {
@@ -358,7 +358,8 @@ footer i {
   }
   main {
     width: auto;
-    background-image: url("img/desktop/3.png");
+    background-image: url("../img/desktop/3.png");
+    background-size: contain;
     -ms-grid-rows: auto auto auto auto;
         grid-template-rows: auto auto auto auto;
   }
@@ -431,6 +432,8 @@ footer i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 50%;
+    border-radius: 10px;
   }
   main .contacto h2 {
     margin-right: unset;

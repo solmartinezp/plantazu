@@ -8,9 +8,6 @@ Parrafos: Kollektif */
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
 }
 
 body {
@@ -173,9 +170,7 @@ nav #checkbox:checked ~ .label .span:after {
 }
 
 header .logo img {
-  height: 90%;
   padding: unset;
-  width: inherit;
 }
 
 footer {
@@ -506,8 +501,9 @@ section {
 
 @media only screen and (min-width: 600px) {
   header {
-    background-image: url("img/desktop/4.png");
+    background-image: url("../img/desktop/4.png");
     background-repeat: no-repeat;
+    background-size: cover;
   }
   header .label {
     display: none;
@@ -519,6 +515,7 @@ section {
   header nav {
     background-color: #fa8f4d;
     height: 40px;
+    width: 100vw;
   }
   header nav ul {
     width: unset;
@@ -533,6 +530,9 @@ section {
   }
   header nav ul li {
     padding: unset;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   header nav ul li a {
     font-size: 25px;
@@ -547,8 +547,14 @@ section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-image: url("../img/desktop/3.png");
+    background-size: contain;
   }
   section .plant {
+    margin-top: 100px;
     width: 350px;
     height: 750px;
     padding-top: unset;
