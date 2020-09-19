@@ -10,16 +10,18 @@ body {
     display: grid;
     background-color: $color6;
     grid-template-columns: auto;
-    grid-template-rows: 1fr auto 0.2fr;
+    grid-template-rows: 1fr auto auto;
     grid-template-areas: 'header'
                             'main'
                             'footer';
+                        
 }
 @import '_header';
 @import '_main';
 @import '_footer';
 
 @media only screen and (min-width: 600px) {
+
     header {
         background-image: url('../img/desktop/4.png');
         background-repeat: no-repeat;
@@ -49,11 +51,15 @@ body {
             }
         }
     }
-    
+    .title {
+        width: 70%;
+    }
+
     main {
         width: auto;
         background-image: url('../img/desktop/3.png');
         background-size: contain;
+        grid-template-columns: min-content;
         grid-template-rows: auto auto auto auto;
         .search {
             background-image: none;
@@ -62,18 +68,17 @@ body {
             flex-direction: column;
             align-items: center;
             margin: unset;
-            margin-bottom: 100px;
             p {
                 text-align: center;
                 margin-right: 0;
-                width: unset;
+                width: 80%;
                 margin-left: 0;
             }
         }
         .quienes-somos {
             background-image: none;
             margin: unset;
-            width: 100vw;
+            width: fit-content;
             display: flex;
             flex-direction: column;
             align-items: center;

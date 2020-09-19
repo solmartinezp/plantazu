@@ -1,5 +1,6 @@
 header{
     grid-area: header;
+    
 }
 
 .logo {
@@ -60,7 +61,7 @@ nav {
         position: absolute;
         padding-top: 10px;
         padding-left: 10px;
-        cursor:pointer;
+        cursor: pointer;
         width: 100vw;
         padding-bottom: 10px;
         background-color: $color6;

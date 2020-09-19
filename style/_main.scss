@@ -78,13 +78,14 @@ main {
     width: 100vw;
     background-image: url('../img/bg/1.png');
     background-size: cover;
-    background-position: bottom;
+    background-position: 80%;
+    margin-bottom: 100px;
     h2 {
         padding-top: 20px;
         font-family: $font1;
         color: $color6;
         text-align: right;
-        margin-right: 20px;
+       margin-right: 20px;
         font-size: 35px;
     }
     form {
